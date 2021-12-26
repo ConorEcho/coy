@@ -15,7 +15,7 @@ type entry struct {
 	v interface{}
 }
 
-func NewCache(size int) *Cache {
+func New(size int) *Cache {
 	return &Cache{
 		ll:      list.New(),
 		cache:   make(map[string]*list.Element),

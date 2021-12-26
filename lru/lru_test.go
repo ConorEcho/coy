@@ -3,7 +3,7 @@ package lru
 import "testing"
 
 func TestAdd(t *testing.T) {
-	cache := NewCache(2)
+	cache := New(2)
 
 	cache.Add("foo", 1)
 
@@ -30,7 +30,7 @@ func TestAdd(t *testing.T) {
 }
 
 func TestGet(t *testing.T) {
-	cache := NewCache(1)
+	cache := New(1)
 	cache.Add("foo", "1")
 
 	if val, ok := cache.Get("foo"); !ok || val.(string) != "1" {
